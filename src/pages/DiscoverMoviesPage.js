@@ -13,7 +13,14 @@ export default function DiscoverMoviesPage() {
   ];
 
   const search = async () => {
-    setSearchState("searching");
+    setSearchState("Searcing...");
+    // setSearchState(
+    //   <img
+    //     style={{ height: 20 + "px" }}
+    //     src="./loading.gif"
+    //     alt=""
+    //   />
+    // );
     console.log("Start searching for:", searchText);
 
     // Best practice: encode the string so that special characters
@@ -57,6 +64,7 @@ export default function DiscoverMoviesPage() {
         <button onClick={search}>Search</button>
       </p>
       <p>{searchState}</p>
+
       <div className="CardWrapper">
         {movies.map((movie) => {
           const { Title, Year, Poster } = movie;
