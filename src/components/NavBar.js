@@ -3,13 +3,27 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div activeClassName="NavLink">
+    <div
+      activeClassName="NavLink"
+      style={{
+        color: "white",
+        backgroundColor: "lightgreen",
+        padding: 0.5 + "em",
+        margin: 0.2 + "em",
+      }}
+    >
       <NavLink
         to="/"
         exact="true"
         activeStyle={{
           fontWeight: "bolder",
-          color: "green",
+          color: "yellow",
+        }}
+        style={{
+          color: "white",
+          backgroundColor: "lightgreen",
+          padding: 0.5 + "em",
+          margin: 0.2 + "em",
         }}
       >
         Home
@@ -19,12 +33,28 @@ export default function NavBar() {
         to="/discover"
         activeStyle={{
           fontWeight: "bolder",
-          color: "green",
+          color: "yellow",
+        }}
+        style={{
+          color: "white",
+          backgroundColor: "lightgreen",
+          padding: 0.5 + "em",
+          margin: 0.2 + "em",
         }}
       >
         Discover Movies
       </NavLink>
-      <NavLink exact={true} to="/about" activeStyle={{ fontWeight: "bolder" }}>
+      <NavLink
+        exact={true}
+        to="/about"
+        activeStyle={{ fontWeight: "bolder", color: "yellow" }}
+        style={{
+          color: "white",
+          backgroundColor: "lightgreen",
+          padding: 0.5 + "em",
+          margin: 0.2 + "em",
+        }}
+      >
         About
       </NavLink>
     </div>
