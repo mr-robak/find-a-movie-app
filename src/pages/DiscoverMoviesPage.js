@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import MovieCard from "../components/MovieCard";
+import "./DiscoverMoviesPage.css";
 
 export default function DiscoverMoviesPage() {
   const [searchText, set_searchText] = useState("");
@@ -45,7 +47,7 @@ export default function DiscoverMoviesPage() {
   );
 
   return (
-    <div>
+    <div className="DiscoverMoviesPage">
       <h1>Discover some movies!</h1>
       <p>
         <input
@@ -55,11 +57,17 @@ export default function DiscoverMoviesPage() {
         <button onClick={search}>Search</button>
       </p>
       <p>{searchState}</p>
-      <p>
+      <div className="CardWrapper">
         {movies.map((movie) => {
-          return movie.Title;
+          const { Title, Year, Poster } = movie;
+          return <MovieCard title={Title} year={Year} img={Poster} />;
         })}
-      </p>
+      </div>
     </div>
   );
 }
+
+//<MovieCard title={title} year={}/>
+// {movies.map((movie) => {
+//   return movie.Title;
+// })}

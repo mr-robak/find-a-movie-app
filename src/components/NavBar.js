@@ -29,7 +29,6 @@ export default function NavBar() {
         Home
       </NavLink>
       <NavLink
-        exact={true}
         to="/discover"
         activeStyle={{
           fontWeight: "bolder",
@@ -45,7 +44,6 @@ export default function NavBar() {
         Discover Movies
       </NavLink>
       <NavLink
-        exact={true}
         to="/about"
         activeStyle={{ fontWeight: "bolder", color: "yellow" }}
         style={{
