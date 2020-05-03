@@ -1,6 +1,7 @@
 .MoviePage {
   display: inline-flex;
 }
-img {
-  max-width: 25%;
+.MoviePage img {
+  max-width: 35%;
+  /* width: 400px; */
 }
