@@ -9,7 +9,7 @@ export default function MoviePage(props) {
   console.log("Movie Page params: ", props);
 
   const routeParameters = useParams();
-  // console.log("routeParameters: ", routeParameters.imdb_id);
+  console.log("routeParameters: ", routeParameters.imdb_id);
 
   useEffect(() => {
     async function fetchData() {
