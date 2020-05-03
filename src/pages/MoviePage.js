@@ -22,7 +22,7 @@ export default function MoviePage(props) {
     fetchData();
   }, [routeParameters.imdb_id]);
 
-  console.log(movieData);
+  console.log("!!!Downloaded movie data:", movieData);
 
   const {
     Title,
@@ -41,11 +41,13 @@ export default function MoviePage(props) {
       <img src={Poster} alt="" />{" "}
       <div>
         <h2>{Title}</h2>
-        <p>Genre: {Genre}</p>
+        <p>{Year}</p>
+        <p>{Genre}</p>
+        <br />
         <p>Director: {Director}</p>
 
         <p>Plot: {Plot}</p>
-        <p>{Year}</p>
+
         <p>{Country}</p>
         <p>{Runtime}</p>
         <p>imdb rating: {imdbRating}</p>
