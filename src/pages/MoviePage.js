@@ -20,7 +20,7 @@ export default function MoviePage(props) {
       set_movieData(response.data);
     }
     fetchData();
-  }, []);
+  }, [routeParameters.imdb_id]);
 
   console.log(movieData);
 
@@ -29,7 +29,7 @@ export default function MoviePage(props) {
     Country,
     Director,
     Genre,
-    Language,
+    // Language,
     Plot,
     Poster,
     Runtime,
