@@ -4,16 +4,11 @@ import "./DiscoverMoviesPage.css";
 
 export default function DiscoverMoviesPage() {
   const [searchText, set_searchText] = useState("");
-  const [searchState, setSearchState] = useState("idle");
+  const [searchState, setSearchState] = useState("Search for a movie!");
   const [movies, setMovies] = useState([]);
-  const searchStates = [
-    { status: "idle", data: "" },
-    { status: "searching", data: "" },
-    { status: "done", data: "" },
-  ];
 
   const search = async () => {
-    setSearchState("Searcing...");
+    setSearchState("Searching...");
     // setSearchState(
     //   <img
     //     style={{ height: 20 + "px" }}
@@ -37,21 +32,20 @@ export default function DiscoverMoviesPage() {
     //   `https://omdbapi.com/?apikey=ef5d807a&s=${queryParam}`
     // );
 
-    console.log("Success!", data);
     // const dataArray = Object.entries(data);
-    console.log("downloadedData!!!!", data.Search);
+    console.log("Success! downloadedData= :", data.Search);
 
-    setSearchState("Done!");
+    setSearchState(`Searched for: "${searchText}"`);
     set_searchText("");
     setMovies(data.Search);
   };
 
-  console.log(
-    "ALL NEW MOVIES: ",
-    movies.map((movie) => {
-      return movie.Title;
-    })
-  );
+  // console.log(
+  //   "ALL NEW MOVIES: ",
+  //   movies.map((movie) => {
+  //     return movie.Title;
+  //   })
+  // );
 
   return (
     <div className="DiscoverMoviesPage">
@@ -67,8 +61,11 @@ export default function DiscoverMoviesPage() {
 
       <div className="CardWrapper">
         {movies.map((movie) => {
-          const { Title, Year, Poster } = movie;
-          return <MovieCard title={Title} year={Year} img={Poster} />;
+          const { Title, Year, Poster, imdbID } = movie;
+
+          return (
+            <MovieCard title={Title} year={Year} img={Poster} imdbID={imdbID} />
+          );
         })}
       </div>
     </div>
