@@ -13,7 +13,7 @@ export default function MoviePage(props) {
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://www.omdbapi.com/?apikey=ef5d807a&i=${routeParameters.imdb_id}&plot=full%22`;
+      const url = `https://www.omdbapi.com/?apikey=ef5d807a&i=${routeParameters.imdb_id}&plot=full%22`;
       const response = await axios.get(url);
 
       console.log("Axios fetched: ", response.data);
