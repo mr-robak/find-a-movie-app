@@ -2,9 +2,16 @@
   display: inline-flex;
 }
 .MoviePage img {
+  min-width: 50%;
+  max-width: 400px;
+
   margin-top: 1em;
   margin-right: 2em;
-  max-width: 35%;
+
+  border: 0.4em;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  box-shadow: 2px 3px 13px 0px rgba(0, 0, 0, 0.3);
   /* width: 400px; */
 }
 

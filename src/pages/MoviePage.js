@@ -45,9 +45,9 @@ export default function MoviePage(props) {
         <p>{Genre}</p>
         <br />
         <p>Director: {Director}</p>
-
+        <br />
         <p>Plot: {Plot}</p>
-
+        <br />
         <p>{Country}</p>
         <p>{Runtime}</p>
         <p>imdb rating: {imdbRating}</p>
