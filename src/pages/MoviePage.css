@@ -2,6 +2,13 @@
   display: inline-flex;
 }
 .MoviePage img {
+  margin-top: 1em;
+  margin-right: 2em;
   max-width: 35%;
   /* width: 400px; */
+}
+
+.MoviePage p,
+h2 {
+  text-align: left;
 }
